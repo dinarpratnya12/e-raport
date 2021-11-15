@@ -57,11 +57,11 @@
                     <div class="col-12">
                         <!-- Footer Logo -->
                         <div class="footer-logo">
-                            <a href="" class="text-light" style="font-weight: bold; font-size: 20px;">SMK-YPC TASIKMALAYA</a>
+                            <a href="" class="text-light" style="font-weight: bold; font-size: 20px;">SD Negeri Purwantoro 2 Kota Malang</a>
                         </div>
                         <!-- Copywrite -->
                         <p><a href="#"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> , SMK-YPC TASIKMALAYA All rights reserved <a href="https://colorlib.com" target="_blank"></a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script>, SD Negeri Purwantoro 2 Malang <a href="#" target="_blank"></a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
                     </div>
                 </div>
@@ -70,16 +70,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> , SMK
 
         <!-- Bottom Footer Area -->
         <div class="bottom-footer-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <a href="#"><span>NO HP:</span> +62987346523</a>
-                <a href="#"><span>Email:</span> smkypc@sch.com</a>
-            </div>
             <!-- Follow Us -->
             <div class="follow-us">
                 <span>FOLLOW US</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/SDN-Purwantoro-2-Malang-123897491639192"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/sdnpurwantoro2/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCe18-_nsmYeDGStF4v6AsZg"><i class="fa fa-youtube" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>

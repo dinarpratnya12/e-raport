@@ -1,13 +1,13 @@
     <!-- ##### Hero Area Start ##### -->
     <!-- <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(<?= base_url('theme/clever/') ?>img/bg-img/bg1.jpg);"> -->
-    <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(<?= base_url() ?>asset/img/background/2.jpg);">
+    <section class="hero-area bg-img bg-overlay-2by5" style="background-image: url(<?= base_url() ?>asset/img/background/bg.JPG);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
                     <!-- Hero Content -->
                     <div class="hero-content text-center">
-                        <h2>SMK-YPC TASIKMALAYA</h2>
-                        <span class="btn clever-btn">#SMK BISA</span>
+                        <h2>SD Negeri Purwantoro 2 Kota Malang</h2>
+                        <span class="btn clever-btn">E-Raport</span>
                         
                     </div>
                 </div>
@@ -23,8 +23,8 @@
             <div class="card-header"></div>
             <div class="card-body">
                 <blockquote class="blockquote text-center">
-                  <p class="mb-0">SMK-YPC TASIKMALAYA , siap belajar , siap berusaha , siap sukses , Allahuakbar !</p>
-                  <footer class="blockquote-footer"><cite title="Source Title">SMK-YPC TASIKMALAYA</cite></footer>
+                  <p class="mb-0">E-Raport</p>
+                  <footer class="blockquote-footer"><cite title="Source Title">SD Negeri Purwantoro 2 Kota Malang</cite></footer>
                 </blockquote>
             </div>
         </div>
@@ -32,48 +32,7 @@
     </section>
 
 
-    <?php if ($check_jurusan>0) : ?>
-    <!-- ##### Jurusan ##### -->
-    <section class="best-tutors-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="section-heading">
-                        <h3>KOMPETENSI KEAHLIAN</h3>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <div class="tutors-slide owl-carousel wow fadeInUp" data-wow-delay="250ms">
-                        
-                        <?php foreach ($all_jurusan as $jurusan): ?>
-                            <!-- Single Tutors Slide -->
-                            <div class="single-tutors-slides">
-                                <!-- Tutor Thumbnail -->
-                                <div class="tutor-thumbnail">
-                                    <img src="<?= base_url('asset/img/jurusan/').$jurusan['img_jurusan'] ?>" alt="">
-                                </div>
-                                <!-- Tutor Information -->
-                                <div class="tutor-information">
-                                    <h5><?= strtoupper($jurusan['nama_jurusan']) ?></h5>
-                                    <span>#<?= strtoupper($jurusan['nama_kategori_jurusan']) ?></span>
-                                    <p><?= $jurusan['deskripsi_jurusan'] ?></p>
-                                    
-                                </div>
-                            </div>    
-                        <?php endforeach; ?>
-                        
-                    </div>
-                
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Jurusan ##### -->
-    <?php endif; ?>
-    
+       
 
     <?php if ($check_pengumuman>0) : ?>
     <!-- ##### Pengumuman ##### -->
@@ -102,7 +61,7 @@
                         <!-- Date & Fee -->
                         <div class="date-fee d-flex justify-content-between">
                             <div class="date">
-                                <p><i class="fa fa-clock"></i> BY SMK-YPC <?= date('d/m/Y',strtotime($pengumuman['created_at'])) ?></p>
+                                <p><i class="fa fa-clock"></i> SD Negeri Purwantoro 2 Malang <?= date('d/m/Y',strtotime($pengumuman['created_at'])) ?></p>
                             </div>
                             <div class="events-fee">
                                 <a href="#" id="<?= $pengumuman['id_pengumuman'] ?>" class="free detail-pengumuman">Detail</a>

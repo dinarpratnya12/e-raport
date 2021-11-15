@@ -9,8 +9,9 @@
     <!-- The above 4 meta tags *Must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>OUR-SCHOOL | <?= $title; ?></title>
-
+    <title>E-Raport | <?= $title; ?></title>
+    <!--===============================================================================================-->
+	<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo.png">
     <!-- Favicon -->
     <link rel="icon" href="<?= base_url() ?>asset/img/favicon/favicon.ico">
 
