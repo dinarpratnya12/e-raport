@@ -3,8 +3,9 @@
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" method="post" action="<?= base_url('register') ?>">
 					<span class="login100-form-title p-b-26 text-primary">
-						OUR-SCHOOL
+						E-Raport
 					</span>
+					SD Negeri Purwantoro 2 Malang
 					<span class="login100-form-title p-b-38">
 						<img src="<?= base_url() ?>asset/img/logo/logo.png" width="100">
 					</span>
