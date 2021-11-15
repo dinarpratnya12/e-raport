@@ -21,6 +21,7 @@ class Guru extends CI_Controller {
 	{
 		$data['title']				= 'Dashboard Guru';
 		$data['user_login_data'] 	= $this->user_login_data;
+		// $data['total_kelas']			= $this->M_Guru->count_table_data("tbl_kelas");
 		########### ============= ##############
 		$this->load->view('layouts/header',$data);
 		$this->load->view('layouts/navbar',$data);

@@ -34,6 +34,15 @@ class M_Admin extends CI_Model {
 		}
 	}
 
+	public function get_kelas($id=NULL)
+	{
+		if ($id) {
+			$this->db->get_where("tbl_kelas",["id_kelas" => $id]);
+		}else{
+			return $this->db->get("tbl_kelas",["id_kelas" => $id]);
+		}
+	}
+
 	public function create($table,$data=[])
 	{
 		return $this->db->insert($table,$data);

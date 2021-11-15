@@ -25,7 +25,7 @@ class Admin extends CI_Controller {
 		$data['all_unread_pesan'] 		= $this->M_Admin->get_all_unread_pesan();
 		$data['total_user']				= $this->M_Admin->count_table_data("tbl_user");
 		$data['total_pesan']			= $this->M_Admin->count_table_data("tbl_pesan");
-		// $data['total_kelas']			= $this->M_Admin->count_table_data("tbl_kelas");
+		//$data['total_kelas']			= $this->M_Admin->count_table_data("tbl_kelas");
 		########### ============= ##############
 		$this->load->view('layouts/header',$data);
 		$this->load->view('layouts/navbar',$data);

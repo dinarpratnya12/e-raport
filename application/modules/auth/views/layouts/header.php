@@ -4,11 +4,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>OUR-SCHOOL | <?= $title; ?></title>
+	<title>E-Raport | <?= $title; ?></title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" href="<?= base_url() ?>asset/img/favicon/favicon.ico">
+<!--===============================================================================================-->
+<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo.png">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
