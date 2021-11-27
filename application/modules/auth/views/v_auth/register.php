@@ -5,9 +5,12 @@
 					<span class="login100-form-title p-b-26 text-primary">
 						E-Raport
 					</span>
-					SD Negeri Purwantoro 2 Malang
+					<span class="login10-form-title p-b-14 text-primary">
+						<center>SD Negeri Purwantoro 2 Malang</center>
+					</span>
 					<span class="login100-form-title p-b-38">
-						<img src="<?= base_url() ?>asset/img/logo/logo.png" width="100">
+						<br>
+						<img src="<?= base_url() ?>asset/img/logo/logo1.png" width="100">
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Masukan username ">
@@ -30,7 +33,7 @@
 						<span class="focus-input100" data-placeholder="Password"></span>
 						<?= form_error('password','<small class="text-danger">','</small>') ?>
 					</div>
-					<?= get_csrf(); ?>	
+					<?= get_csrf(); ?>
 					<div class="">
 						<button class="btn btn-primary col-lg" type="submit">REGISTER</button>
 					</div>
@@ -49,5 +52,5 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="dropDownSelect1"></div>

@@ -7,7 +7,7 @@
 						LUPA KATASANDI
 					</span>
 					<span class="login100-form-title p-b-48">
-						<img src="<?= base_url() ?>asset/img/logo/logo.png" width="100">
+						<img src="<?= base_url() ?>asset/img/logo/logo1.png" width="100">
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Email valid : a@b.c">
@@ -29,6 +29,6 @@
 			</div>
 		</div>
 	</div>
-	
+
 
 	<div id="dropDownSelect1"></div>
