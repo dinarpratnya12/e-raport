@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Waktu pembuatan: 14 Nov 2021 pada 13.10
+-- Waktu pembuatan: 06 Des 2021 pada 04.55
 -- Versi server: 10.1.37-MariaDB
 -- Versi PHP: 7.3.0
 
@@ -129,6 +129,21 @@ CREATE TABLE `tbl_file` (
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_jurusan`
+--
+
+CREATE TABLE `tbl_jurusan` (
+  `id_jurusan` tinyint(4) NOT NULL,
+  `nama_jurusan` varchar(255) NOT NULL,
+  `nama_lain_jurusan` varchar(55) NOT NULL,
+  `deskripsi_jurusan` text NOT NULL,
+  `img_jurusan` varchar(255) NOT NULL,
+  `kategori_jurusan_id` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_kategori_blog`
 --
 
@@ -191,13 +206,34 @@ INSERT INTO `tbl_kategori_jurusan` (`id_kategori_jurusan`, `nama_kategori_jurusa
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `tbl_kategori_kelas`
+--
+
+CREATE TABLE `tbl_kategori_kelas` (
+  `id_kategori_kelas` tinyint(10) NOT NULL,
+  `nama_kategori_kelas` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tbl_kategori_kelas`
+--
+
+INSERT INTO `tbl_kategori_kelas` (`id_kategori_kelas`, `nama_kategori_kelas`) VALUES
+(1, '2021-2022');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `tbl_kelas`
 --
 
 CREATE TABLE `tbl_kelas` (
   `id_kelas` tinyint(4) NOT NULL,
   `nama_kelas` varchar(255) NOT NULL,
-  `deskripsi_kelas` text NOT NULL
+  `nama_lain_kelas` varchar(55) NOT NULL,
+  `deskripsi_kelas` text NOT NULL,
+  `img_kelas` varchar(255) NOT NULL,
+  `kategori_kelas_id` tinyint(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -254,7 +290,11 @@ CREATE TABLE `tbl_nav_home` (
 INSERT INTO `tbl_nav_home` (`id_nav`, `title`, `url`, `is_active`) VALUES
 (1, 'Home', 'home', 1),
 (2, 'About', 'about', 1),
-(3, 'Contact', 'contact', 1);
+(3, 'Contact', 'contact', 1),
+(4, 'Blog', 'blog', 0),
+(5, 'Pengumuman', 'pengumuman', 0),
+(6, 'Agenda', 'agenda', 0),
+(7, 'Download', 'download', 1);
 
 -- --------------------------------------------------------
 
@@ -326,9 +366,12 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id_user`, `username`, `email`, `password`, `profile_image`, `role_id`, `is_active`, `date_created`) VALUES
-(52, 'Guru 1', 'guru1@gmail.com', '$2y$10$C3kEayN3p/N2lRL6yCOjwe9M2WaIXmna6ZvMNRmUNOeXs6ruuvxsC', 'user.png', 2, 1, '2021-11-14 12:09:57'),
-(53, 'Siswa 1', 'siswa1@gmail.com', '$2y$10$8nNz8md.a/bm0Ul9K30bOeBJjDeycqjuT6dh4VcoBKTVVbME1jCQ6', 'user.png', 3, 1, '2021-11-14 12:09:50'),
-(55, 'Dinar', 'dinar@sdnpurwantoro2.sch.id', '$2y$10$sOuYHXBOBmbofa1F.jDujOccVBXhabb3Sdu4eaaxQJAnlqirGzaSy', 'user.png', 1, 1, '2021-11-14 08:09:10');
+(51, 'Admin 1', 'admin1@sdnpurwantoro2.sch.id', '$2y$10$cMeLdDJLctjJH9aNovDgAeASdX3i6DubOkenTS3GyBeu2Is2PV2Ta', 'sean-lim-NPlv2pkYoUA-unsplash.jpg', 1, 1, '2021-12-06 02:11:57'),
+(52, 'Guru', 'guru@sdnpurwantoro2.sch.id', '$2y$10$VYn7o1MOQgsF5eTqUl9Ts.NrCD4WbLcFmXK4AhpxSIy9MCq.0Yhfm', 'user.png', 2, 1, '2021-12-06 02:12:42'),
+(53, 'Siswa', 'siswa@sdnpurwantoro2.sch.id', '$2y$10$X9XserM3XkT2eNcxoz7RL.wuq5J/LXqANWgKfJtH.Y8Ld3CugCALa', 'user.png', 3, 1, '2021-12-06 02:13:10'),
+(54, 'Siswa 1', 'siswa1@sdnpurwantoro2.sch.id', '$2y$10$2Q0ZHatKBmElnx61.AKEme5kXuUilRH0X80WLhyKhVp483P4YXFau', 'user.png', 3, 1, '2021-12-06 02:13:32'),
+(55, 'Admin', 'admin@sdnpurwantoro2.sch.id', '$2y$10$nh7ZFccag1vjoMXH.gO46u08WWU8C7rKIMaTN1tQOEa0gSTC8aS5u', 'user.png', 1, 1, '2021-12-06 02:13:39'),
+(56, 'Admin 2', 'admin2@sdnpurwantoro2.sch.id', '$2y$10$IHJHNPT8UNXWpPmoZT9Caud7XkdYT6faa6xLtrpEb7ICg7V5hS4Nm', 'user.png', 1, 1, '2021-12-06 02:14:42');
 
 -- --------------------------------------------------------
 
@@ -354,20 +397,12 @@ INSERT INTO `tbl_user_menu` (`id_user_menu`, `user_menu_title`, `user_menu_icon`
 (2, 'User', 'nav-icon fas fa-users', 'admin/master-user', 1, 1),
 (3, 'Kelas', 'nav-icon fas fa-user-tie', 'admin/master-kelas', 1, 1),
 (4, 'Dashboard Guru', 'nav-icon fas fa-tachometer-alt\r\n', 'guru', 1, 2),
-(5, 'Tulis Agenda', 'nav-icon fas fa-info', 'guru/write-agenda', 1, 2),
-(6, 'Tulis Blog', 'nav-icon fas fa-book', 'guru/write-blog', 1, 2),
-(7, 'Tulis Pengumuman', 'nav-icon fas fa-user-tie', 'guru/write-pengumuman', 1, 2),
 (8, 'Edit Profil', 'nav-icon fas fa-user-edit', 'user/edit-profile', 1, 3),
 (9, 'Ubah Password', 'nav-icon fas fa-lock', 'user/change-password', 1, 3),
 (10, 'Profil Saya', 'nav-icon fas fa-user', 'user', 1, 3),
 (12, 'Pesan', 'nav-icon fas fa-envelope', 'admin/master-pesan', 1, 1),
-(13, 'Blog', 'nav-icon fas fa-book', 'admin/master-blog', 1, 1),
-(14, 'Agenda', 'nav-icon fas fa-calendar', 'admin/master-agenda', 1, 1),
-(15, 'Pengumuman', 'nav-icon fas fa-info', 'admin/master-pengumuman', 1, 1),
 (16, 'Menu Sidebar', 'nav-icon fas fa-folder', 'admin/master-menu', 1, 1),
-(17, 'Komentar', 'nav-icon fas fa-comment', 'admin/master-komentar', 0, 1),
-(18, 'Balasan Komentar', 'nav-icon fas fa-reply', 'admin/master-balasan-komentar', 0, 1),
-(19, 'Download', 'nav-icon fas fa-download', 'user/download', 0, 3),
+(19, 'Download', 'nav-icon fas fa-download', 'user/download', 1, 3),
 (20, 'Hapus Akun Saya', 'nav-icon fa fa-ban', 'user/delete-my-account', 1, 3),
 (21, 'File', 'nav-icon fas fa-file', 'admin/master-file', 1, 1),
 (22, 'Token', 'nav-icon fas fa-key', 'admin/master-token', 0, 1),
@@ -421,6 +456,12 @@ ALTER TABLE `tbl_file`
   ADD PRIMARY KEY (`id_file`);
 
 --
+-- Indeks untuk tabel `tbl_jurusan`
+--
+ALTER TABLE `tbl_jurusan`
+  ADD PRIMARY KEY (`id_jurusan`);
+
+--
 -- Indeks untuk tabel `tbl_kategori_blog`
 --
 ALTER TABLE `tbl_kategori_blog`
@@ -437,6 +478,12 @@ ALTER TABLE `tbl_kategori_file`
 --
 ALTER TABLE `tbl_kategori_jurusan`
   ADD PRIMARY KEY (`id_kategori_jurusan`);
+
+--
+-- Indeks untuk tabel `tbl_kategori_kelas`
+--
+ALTER TABLE `tbl_kategori_kelas`
+  ADD PRIMARY KEY (`id_kategori_kelas`);
 
 --
 -- Indeks untuk tabel `tbl_kelas`
@@ -533,6 +580,12 @@ ALTER TABLE `tbl_file`
   MODIFY `id_file` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT untuk tabel `tbl_jurusan`
+--
+ALTER TABLE `tbl_jurusan`
+  MODIFY `id_jurusan` tinyint(4) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT untuk tabel `tbl_kategori_blog`
 --
 ALTER TABLE `tbl_kategori_blog`
@@ -549,6 +602,12 @@ ALTER TABLE `tbl_kategori_file`
 --
 ALTER TABLE `tbl_kategori_jurusan`
   MODIFY `id_kategori_jurusan` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `tbl_kategori_kelas`
+--
+ALTER TABLE `tbl_kategori_kelas`
+  MODIFY `id_kategori_kelas` tinyint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_kelas`
@@ -596,7 +655,7 @@ ALTER TABLE `tbl_role`
 -- AUTO_INCREMENT untuk tabel `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `id_user` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id_user` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT untuk tabel `tbl_user_menu`
