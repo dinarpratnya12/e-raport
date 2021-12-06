@@ -11,9 +11,9 @@
     <!-- Title -->
     <title>E-Raport | <?= $title; ?></title>
     <!--===============================================================================================-->
-	<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo.png">
+	<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo1.png">
     <!-- Favicon -->
-    <link rel="icon" href="<?= base_url() ?>asset/img/favicon/favicon.ico">
+    <link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo1.png">
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?= base_url() ?>theme/clever/style.css">
@@ -35,16 +35,4 @@
     <header class="header-area">
 
         <!-- Top Header Area -->
-        <div class="top-header-area d-flex justify-content-between align-items-center">
-            <!-- Contact Info -->
-            <div class="contact-info">
-                <a href="#"><span>Telp:</span> +62 8772 9944 </a>
-                <a href="#"><span>Email:</span> smkypc@sch.com</a>
-            </div>
-            <!-- Follow Us -->
-            <div class="follow-us">
-                <span>Follow us</span>
-                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-            </div>
-        </div>
+        

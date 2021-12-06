@@ -10,7 +10,7 @@
       </div>
       <div class="modal-body">
         <p class="detail-pengumuman-modal">
-            
+
         </p>
       </div>
       <div class="modal-footer">
@@ -34,7 +34,7 @@
       </div>
       <div class="modal-body">
         <p class="detail-agenda-modal">
-            
+
         </p>
       </div>
       <div class="modal-footer">
@@ -73,9 +73,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>, SD N
             <!-- Follow Us -->
             <div class="follow-us">
                 <span>FOLLOW US</span>
-                <a href="https://www.facebook.com/SDN-Purwantoro-2-Malang-123897491639192"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/sdnpurwantoro2/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://www.youtube.com/channel/UCe18-_nsmYeDGStF4v6AsZg"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/SDN-Purwantoro-2-Malang-123897491639192" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/sdnpurwantoro2/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/channel/UCe18-_nsmYeDGStF4v6AsZg" target="_blank" ><i class="fa fa-youtube" aria-hidden="true"></i></a>
             </div>
         </div>
     </footer>
@@ -86,7 +86,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>, SD N
     <script src="<?= base_url() ?>theme/clever/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="<?= base_url() ?>theme/clever/js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->  
+    <!-- Bootstrap js -->
     <script src="<?= base_url() ?>theme/clever/js/bootstrap/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="<?= base_url() ?>theme/clever/js/plugins/plugins.js"></script>
@@ -95,7 +95,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>, SD N
 
     <script src="<?= base_url('asset/vendor/AdminLTE-3.0.1/plugins/toastr/') ?>toastr.min.js"></script>
     <!-- <script src="<?= base_url('asset/vendor/AdminLTE-3.0.1/plugins/sweetalert2/') ?>sweetalert2.min.js"></script> -->
-    
+
 <!-- toast flashdata -->
 <?php if ($this->session->flashdata('success')): ?>
 <div class="success-message"><?= $this->session->flashdata('success') ?></div>
@@ -126,7 +126,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script>, SD N
 <?php endif; ?>
 
 <script type="text/javascript">
-    
+
     $(".detail-pengumuman").click(function() {
         let id_pengumuman = $(this).attr('id')
         $.ajax({

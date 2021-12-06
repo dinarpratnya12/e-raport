@@ -21,7 +21,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+
         <div class="card">
             <div class="card-header">
               <h3 class="card-title"><?= $title; ?></h3>
@@ -34,13 +34,13 @@
               <div class="row">
                 <div class="col-md-5 float-right">
               </div>
-              </div>  
+              </div>
               <div class="table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Img</th>
+                  <!-- <th>Img</th> -->
                   <th>Username</th>
                   <th>Email</th>
                   <th>Is Active</th>
@@ -53,7 +53,7 @@
                   <?php $no=1; foreach ($all_user as $user): ?>
                     <tr>
                   <th><?= $no++ ?></th>
-                  <td><img src="<?= base_url('asset/img/profile/').$user['profile_image'] ?>" width="40"></td>
+                  <!-- <td><img src="<?= base_url('asset/img/profile/').$user['profile_image'] ?>" width="40"></td> -->
                   <td><?= $user['username'] ?></td>
                   <td><?= $user['email'] ?></td>
                   <td>
@@ -73,12 +73,12 @@
                     <button id="<?= $user['id_user'] ?>" class="btn btn-primary btn-edit"><i class="fas fa-fw fa-edit"></i></button>
                     <a href="<?= base_url('admin/Master_User/delete_user/').$user['id_user'] ?>" class="btn btn-danger btn-hapus" onclick="return confirm('Yakin ?')"><i class="fas fa-fw fa-ban"></i></a>
                   </td>
-                </tr>  
+                </tr>
 
                   <?php endforeach; ?>
-                
+
                 </tbody>
-                <tfoot>
+                <!-- <tfoot>
                 <tr>
                   <th>No</th>
                   <th>Img</th>
@@ -88,7 +88,7 @@
                   <th>Level</th>
                   <th>Action</th>
                 </tr>
-                </tfoot>
+                </tfoot> -->
               </table>
               </div>
               <a onclick="return confirm('Yakin ?')" href="<?= base_url('admin/Master_User/clear_user') ?>" class="btn btn-danger">Kosongkan Data</a>
@@ -124,8 +124,8 @@
         <div class="form-group">
           <input required="" name="password" placeholder="password" class="form-control"></input>
         </div>
-          
-        <?php 
+
+        <?php
         $get_role = $this->db->get('tbl_role')->result_array();
          ?>
         <div class="form-group">
@@ -136,7 +136,7 @@
             <?php endforeach; ?>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="is_active">Aktivasi</label>
           <select name="is_active" class="form-control">
@@ -144,7 +144,7 @@
             <option value="0">Non-Active</option>
           </select>
         </div>
-      
+
       </div>
       <?= get_csrf() ?>
       <div class="modal-footer">
@@ -185,8 +185,8 @@
           <input id="password" name="newpassword" placeholder="password" class="form-control"></input>
           <small class="text-danger text-italic">Kosongkan jika tidak akan di ubah</small>
         </div>
-          
-        <?php 
+
+        <?php
         $get_role = $this->db->get('tbl_role')->result_array();
          ?>
         <div class="form-group">
@@ -197,7 +197,7 @@
             <?php endforeach; ?>
           </select>
         </div>
-        
+
         <div class="form-group">
           <label for="is_active">Aktivasi</label>
           <select id="is_active" name="is_active" class="form-control">
@@ -205,7 +205,7 @@
             <option value="0">Non-Active</option>
           </select>
         </div>
-      
+
       </div>
       <?= get_csrf() ?>
       <div class="modal-footer">
@@ -222,7 +222,7 @@
 
 <script type="text/javascript">
   $(document).ready(function() {
-    
+
     $(".btn-edit").click(function(){
       let id_user = $(this).attr("id")
       $.get("<?= base_url('admin/Master_User/show_user/') ?>"+id_user,function(response){

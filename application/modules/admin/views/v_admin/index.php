@@ -53,11 +53,11 @@
             </div>
           </div>
           <!-- ./col -->
-          <div class="col-lg-4 col-6">
+          <div class="col-lg-4 col-12">
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3><?= $total_kelas; ?><sup style="font-size: 20px"></sup></h3>
+                <h3><?= $total_pesan; ?><sup style="font-size: 20px"></sup></h3>
 
                 <p>Rombel</p>
               </div>

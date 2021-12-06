@@ -41,7 +41,7 @@
                 <tr>
                   <th>No</th>
                   <th>Img</th>
-                  <th>Jurusan</th>
+                  <th>Kelas</th>
                   <th>Alias</th>
                   <th>Action</th>
                 </tr>
@@ -75,7 +75,7 @@
           <!-- Tabel kategori kelas -->
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Kategori <?= $title; ?></h3>
+              <h3 class="card-title">Tahun Ajaran <?= $title; ?></h3>
               <div class="float-right">
                 <button class="btn btn-primary" data-toggle="modal" data-target="#modal-tambah-kategori-file"><i class="fas fa-fw fa-plus"></i> Tambah Data</button>
               </div>
@@ -86,7 +86,7 @@
                 <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama Kategori</th>
+                  <th>Tahun Ajaran</th>
                   <th>Aksi</th>
                 </tr>
                 </thead>

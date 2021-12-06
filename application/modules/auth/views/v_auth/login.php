@@ -42,9 +42,9 @@
 							Registrasi
 						</a>
 						<br>
-						<!-- <a class="txt2" href="<?= base_url('forgot-password') ?>">
+						<a class="txt2" href="<?= base_url('forgot-password') ?>">
 							Lupa Password ?
-						</a> -->
+						</a>
 					</div>
 				</form>
 			</div>

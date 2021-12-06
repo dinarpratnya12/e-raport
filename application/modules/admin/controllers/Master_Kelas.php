@@ -39,11 +39,11 @@ class Master_Kelas extends CI_Controller {
 		$img_kelas = $this->M_Tools_Admin->upload_img('kelas');
 		$this->M_Tools_Admin->resize_image('kelas/'.$img_kelas,'165','165');
 		$data = [
-			'nama_kelas' 			=> htmlentities($this->input->post('nama_kelas',TRUE)),
+			'nama_kelas' 		=> htmlentities($this->input->post('nama_kelas',TRUE)),
 			'nama_lain_kelas' 	=> htmlentities($this->input->post('nama_lain_kelas',TRUE)),
 			'deskripsi_kelas' 	=> htmlentities($this->input->post('deskripsi_kelas',TRUE)),
-			'img_kelas' 			=> 		$img_kelas,
-			'kategori_kelas_id' 	=> $this->input->post('kategori_kelas_id')
+			'img_kelas' 		=> $img_kelas,
+			'kategori_kelas_id' => $this->input->post('kategori_kelas_id')
 		];
 		$this->M_Master_Kelas->create($data);
 		$this->session->set_flashdata('success','Data berhasil ditambah');
@@ -73,6 +73,7 @@ class Master_Kelas extends CI_Controller {
 			'kategori_kelas_id'	=> $this->input->post('kategori_kelas_id')
 		];
 		$id_kelas = $this->input->post('id_kelas');
+		print_r($data);
 		$this->M_Master_Kelas->update($id_kelas,$data);
 		$this->session->set_flashdata('success','Data berhasil diubah');
 		redirect('admin/master-kelas');

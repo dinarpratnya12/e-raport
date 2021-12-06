@@ -1,4 +1,4 @@
-<?php 
+<?php
     $nav_home_menu=$this->db->get_where("tbl_nav_home",["is_active" => 1])->result_array();
  ?>
             <!-- Navbar Area -->
@@ -9,8 +9,8 @@
 
                     <!-- Logo -->
                     <a class="nav-brand" href="" alt="">
-                        <img src="<?= base_url('asset/img/logo/logo-ypc.png') ?>" width="45">
-                        SMK-YPC
+                        <img src="<?= base_url('asset/img/logo/logo1.png') ?>" width="50">
+                        <b>E-Raport</b>
                     </a>
 
                     <!-- Navbar Toggler -->
@@ -34,7 +34,7 @@
                                 <li><a class="text-primary" href="<?= base_url($nhm['url']) ?>"><?= $nhm['title']; ?></a></li>
                                 <?php else: ?>
                                 <li><a href="<?= base_url($nhm['url']) ?>"><?= $nhm['title']; ?></a></li>
-                                <?php endif; ?>    
+                                <?php endif; ?>
                                 <?php endforeach; ?>
                                 <!-- <li><a href="#">Pages</a>
                                     <ul class="dropdown">
@@ -51,7 +51,7 @@
                             </ul>
                             <!-- Search Button -->
                             <div class="search-area">
-                                <form action="<?= base_url('search-blog') ?>" method="post">
+                                <form action="<?= base_url("") ?>" method="post">
                                     <input type="text" class="text-dark" name="keyword" id="search" placeholder="Cari">
                                     <?= get_csrf() ?>
                                     <button type="submit" name="submit"><i class="fa fa-search" aria-hidden="true"></i></button>

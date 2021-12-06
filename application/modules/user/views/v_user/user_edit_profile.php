@@ -21,7 +21,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        
+
           <!-- Default box -->
       <div class="card">
         <div class="card-header">
@@ -35,9 +35,9 @@
           </div>
         </div>
         <div class="card-body">
-          
+
           <div class="row">
-            
+
             <div class="col-md-5">
               <div style="max-width: 540px;">
                 <div class="row no-gutters">
@@ -52,7 +52,7 @@
                     </div>
                   </div>
                 </div>
-              </div>  
+              </div>
             </div>
 
             <div class="col-md-5">
@@ -69,11 +69,11 @@
                 <div class="form-group">
                   <input type="hidden" class="form-control" value="<?= $user_login_data['profile_image'] ?>" name="old_img">
                 </div>
-                <div class="custom-file">
+                <!-- <div class="custom-file">
                   <input type="file" name="file" class="custom-file-input" id="customFile">
                   <label class="custom-file-label" for="customFile">Choose file</label>
                   <small class="text-muted">masukan gambar jika akan merubah foto profil</small>
-                </div>
+                </div> -->
                 <?= get_csrf(); ?>
                 <button type="submit" class="btn btn-primary">KONFIRMASI</button>
               </form>

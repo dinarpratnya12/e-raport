@@ -46,11 +46,11 @@ class Home extends CI_Controller {
 		$this->load->view('layouts/header',$data);
 		$this->load->view('layouts/navbar',$data);
 		$this->load->view('v_home/about');
-		$this->load->view('layouts/footer');	
+		$this->load->view('layouts/footer');
 	}
 
 	public function contact()
-	{	
+	{
 
 		$data['title'] 				= 'Contact';
 		$data['user_login_data'] 	= $this->user_login_data;
@@ -61,9 +61,9 @@ class Home extends CI_Controller {
 			$this->load->view('layouts/header',$data);
 			$this->load->view('layouts/navbar',$data);
 			$this->load->view('v_home/contact');
-			$this->load->view('layouts/footer');	
+			$this->load->view('layouts/footer');
 		}else{
-			$this->M_Home->send_contact_message();		
+			$this->M_Home->send_contact_message();
 		}
 	}
 

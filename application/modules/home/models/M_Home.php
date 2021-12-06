@@ -19,7 +19,7 @@ class M_Home extends CI_Model {
 
 	//kirim pesan ke admin/website ini
 	public function send_contact_message()
-	{	
+	{
 		$get_rows_email = $this->db->get_where("tbl_pesan",["email" => $this->input->post('email')]);
 		if ($get_rows_email->num_rows()<5) {
 			$data = [

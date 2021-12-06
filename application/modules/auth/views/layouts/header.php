@@ -1,4 +1,4 @@
-<?php 
+<?php
 	is_auth_protect("logout");
  ?>
 <!DOCTYPE html>
@@ -8,7 +8,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
-<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo.png">
+<link rel="icon" href="<?= base_url() ?>asset/img/favicon/logo1.png">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/bootstrap/css/bootstrap.min.css">
 <!--===============================================================================================-->
@@ -17,13 +17,13 @@
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/fonts/iconic/css/material-design-iconic-font.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/animate/animate.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/css-hamburgers/hamburgers.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/animsition/css/animsition.min.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/select2/select2.min.css">
-<!--===============================================================================================-->	
+<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="<?= base_url() ?>asset/vendor/Login_v2/css/util.css">

@@ -15,6 +15,7 @@ class M_Master_Kelas extends CI_Model {
 			return $this->db->get('tbl_kelas');
 		}
 	}
+	
 
 	public function update($id,$data=[])
 	{
